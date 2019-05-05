@@ -24,14 +24,6 @@ It includes a remote site setting you can use.
 There is no front-end for these classes.  You must write your own controller, class or execute anonymous to try it out.
 There are custom settings for the class (included).  You must provide values for the custom settings specific to your Toggl user account.
 
-### Manual configuration
-
-Authorize the Toggl API endpoint
-- In target org, go to Setup -> Security -> Remote site settings
-- Create new Remote Site
-    - Remote Site Name = 'Toggl_API'
-    - Remote Site URL = 'https://toggl.com'
-
 
 ### How to Use
 
