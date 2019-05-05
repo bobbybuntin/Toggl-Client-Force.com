@@ -19,7 +19,10 @@ The Toggl Reports API will pull the time entries for every user in a workspace, 
 
 ### Installation
 
-TBD once I upload the source
+These classes can be used to retrieve data from the API.  
+It includes a remote site setting you can use.
+There is no front-end for these classes.  You must write your own controller, class or execute anonymous to try it out.
+There are custom settings for the class (included).  You must provide values for the custom settings specific to your Toggl user account.
 
 ### Manual configuration
 
