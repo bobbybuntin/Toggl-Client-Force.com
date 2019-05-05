@@ -9,7 +9,7 @@ Toggl is a nice web app that helps you keep track of where you're spending your 
 
 I needed to synchronize Toggl time entries into my Salesforce org, so I modified this sample Toggl retreival code to work with the newest Toggl Report API.
 
-This API was built to only request a list of time entries from Toggl, but Toggl has a much more [extensive API](https://www.toggl.com/public/api). If you'd like, you can use my code as a reference to request data from other endpoints. If you do, you should send a pull request my way.
+This API was built to only request a list of time entries from Toggl, but Toggl has a much more [extensive API](https://www.toggl.com/public/api). 
 
 Why the Reports API and not the Toggl API?
 The Toggl API only pulls time entries for the user whose API key is used to pull the data.  That's great if you want each user to pull only their own data or if you are the only user.
