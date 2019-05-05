@@ -1,22 +1,25 @@
-Toggl-Client-Force.com
+
+Toggl Time Entry Retrieval via Toggl Reports API
+Based on chexxor's Toggl-Client-Force.com
 ======================
 
 ### What is this?
 
 Toggl is a nice web app that helps you keep track of where you're spending your time.
 
-I wanted to get Toggl data into a Salesforce org, so I created this code to request data from the Toggl API.
+I needed to synchronize Toggl time entries into my Salesforce org, so I modified this sample Toggl retreival code to work with the newest Toggl Report API.
 
 This API was built to only request a list of time entries from Toggl, but Toggl has a much more [extensive API](https://www.toggl.com/public/api). If you'd like, you can use my code as a reference to request data from other endpoints. If you do, you should send a pull request my way.
+
+Why the Reports API and not the Toggl API?
+The Toggl API only pulls time entries for the user whose API key is used to pull the data.  That's great if you want each user to pull only their own data or if you are the only user.
+
+The Toggl Reports API will pull the time entries for every user in a workspace, allowing one transaction to retrieve everyone's time entires.
 
 
 ### Installation
 
-I made an unmanaged package - https://login.salesforce.com/packaging/installPackage.apexp?p0=04tC0000000lN1g
-
--or-
-
-Download the metadata components from this git repo and deploy to your Salesforce org.
+TBD once I upload the source
 
 ### Manual configuration
 
@@ -24,24 +27,12 @@ Authorize the Toggl API endpoint
 - In target org, go to Setup -> Security -> Remote site settings
 - Create new Remote Site
     - Remote Site Name = 'Toggl_API'
-    - Remote Site URL = 'https://www.toggl.com'
+    - Remote Site URL = 'https://toggl.com'
 
 
 ### How to Use
 
-    // Choose a "from" day and "to" day
-    Date fromDate = System.today();
-    Date toDate = System.today();
 
-    // Then wrap them into a DateTime
-    DateTime fromDateToggl = DateTime.newInstance(fromDate, Time.newInstance(0, 0, 0, 0));
-    DateTime toDateToggl = DateTime.newInstance(toDate, Time.newInstance(23, 59, 0, 0));
-
-    // And pass the time window into the TogglClient.getTimeEntries
-    //   method to get a typed list of Toggl time entries.
-    String togglApiKey = 'your_api_key_here';
-    TogglClient togglClient = new TogglClient(togglApiKey, 'api_token');
-    List<TogglTimeEntry> togglTimeEntryList = togglClient.getTimeEntries(fromDateToggl, toDateToggl);
 
 
 ### Problems?
