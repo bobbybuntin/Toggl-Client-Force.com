@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Toggl Integration Custom Settings</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>TogglAPIToken__c</fullName>
+        <description>Toggl API Key used to authenticate access to the Toggl api</description>
+        <externalId>false</externalId>
+        <label>TogglAPIToken</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TogglUserAgent__c</fullName>
+        <description>User Agent is an email address of the organization calling the API.  This is required by the Toggl API, but it does not need to be authenticated against anything.  They use it to email you if they  have questions about how you are using the API.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User Agent is an email address of the organization calling the API.  This is required by the Toggl API, but it does not need to be authenticated against anything.  They use it to email you if they  have questions about how you are using the API.</inlineHelpText>
+        <label>TogglUserAgent</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TogglWorkspaceId__c</fullName>
+        <description>Unique Id of the Toggl workspace from which the toggl time entries should be retrieved</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unique Id of the Toggl workspace from which the toggl time entries should be retrieved</inlineHelpText>
+        <label>TogglWorkspaceId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>TogglSettings</label>
+    <visibility>Public</visibility>
+</CustomObject>
